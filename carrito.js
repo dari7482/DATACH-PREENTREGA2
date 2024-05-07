@@ -86,7 +86,7 @@ const renderizarCarrito = (productosGuardados) => {
         })
 
     } else {
-        carritoImagen.innerHTML = `<img src="/img/cart-icon-28356.png">`
+        carritoImagen.innerHTML = `<img src="./img/cart-icon-28356.png">`
         contenedorCarrito.appendChild(carritoImagen)
 
 
