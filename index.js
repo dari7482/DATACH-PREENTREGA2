@@ -120,7 +120,7 @@ const renderizarProductos = (produtosRenderizar) => {
         prodCard.innerHTML = `
                         <div class="card-container">
                             <div class="card-image">
-                                <img src="/img/${id}.png">
+                                <img src="./img/${id}.png">
                             </div>
                             <div class="card-descripcion">
                                 <p>${description}</p>                               

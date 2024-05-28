@@ -28,7 +28,7 @@ const renderizarCarrito = (productosGuardados) => {
 
         total = result.map((item) => item.quantity).reduce((acc, curr) => parseInt(acc) + parseInt(curr), 0)
         console.log(total)
-        carritoImagen.innerHTML = `<img  id="contenidoCarrito" src="/img/cart-icon-28356.png">
+        carritoImagen.innerHTML = `<img  id="contenidoCarrito" src="./img/cart-icon-28356.png">
                                     <p class="itemsGuardados">${total}</p>`
         contenedorCarrito.appendChild(carritoImagen)
 
@@ -105,7 +105,7 @@ const renderizarCarrito = (productosGuardados) => {
         })
 
     } else {
-        carritoImagen.innerHTML = `<img src="/img/cart-icon-28356.png">`
+        carritoImagen.innerHTML = `<img src="./img/cart-icon-28356.png">`
         contenedorCarrito.appendChild(carritoImagen)
 
 
