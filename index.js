@@ -1,7 +1,96 @@
-const productos = [{ name: "IronicPunisment", id: "01", type: "Simspon", price: 120000, stock: 32, description: "Ironic Punishment Macfarlen", serie: "McFarlens", cantidad: 0 },
-{ name: "LardLadDonuts&Homero", id: "02", type: "Simpson", price: 210000, stock: 9, description: "Lard Lad Donuts & Homero ", serie: "McFarlens", cantidad: 0 },
-{ name: "KampKrusY", id: "03", type: "simpson", price: 4530, stock: 18, description: "Kamp Krusty Totem Pole ", serie: "McFarlens", cantidad: 0 },
-{ name: "KampKrusY", id: "04", type: "simpson", price: 4530, stock: 18, description: "Kamp Krusty Totem Pole ", serie: "McFarlens", cantidad: 0 }
+const productos = [
+    {
+        name: "IronicPunisment",
+        id: "01", type: "Simspon",
+        price: 120000, stock: 32,
+        description: "Ironic Punishment Macfarlen",
+        serie: "McFarlens",
+        cantidad: 0,
+    },
+
+    {
+        name: "LardLadDonuts&Homero",
+        id: "02", type: "Simpson",
+        price: 210000, stock: 9,
+        description: "Lard Lad Donuts & Homero ",
+        serie: "McFarlens", cantidad: 0
+    },
+    {
+        name: "KampKrusY",
+        id: "03", type: "simpson",
+        price: 4530,
+        stock: 18,
+        description: "Kamp Krusty Totem Pole",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "Homero&Krusty",
+        id: "04",
+        type: "simpson",
+        price: 6730,
+        stock: 20,
+        description: "Homero & Krusty",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "IslandofDr.Hibbert ",
+        id: "05",
+        type: "simpson",
+        price: 8530,
+        stock: 18,
+        description: "Island of Dr. Hibbert",
+        serie: "McFarlens", cantidad: 0
+    },
+    {
+        name: "“PRESIDENTIAL POLITICS”",
+        id: "06", type: "Simspon",
+        price: 140000, stock: 32,
+        description: "ITCHY & SCRATCHY: ",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "ITCHY & SCRATCHY",
+        id: "07",
+        type: "Simpson",
+        price: 20000,
+        stock: 9,
+        description: "ITCHY & SCRATCHY",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "RADIOACTIVE MAN AND FALLOUT BOY",
+        id: "08",
+        type: "simpson",
+        price: 3450,
+        stock: 18,
+        description: "RADIOACTIVE MAN AND FALLOUT BOY",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "THE RAVEN",
+        id: "09",
+        type: "simpson",
+        price: 3020,
+        stock: 20,
+        description: "TREEHOUSE OF HORRORS I",
+        serie: "McFarlens",
+        cantidad: 0
+    },
+    {
+        name: "“WHY YOU…”",
+        id: "10",
+        type: "simpson",
+        price: 6020,
+        stock: 20,
+        description: "HOMER AND BART",
+        serie: "McFarlens",
+        cantidad: 0
+    }
 ]
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []
@@ -18,11 +107,6 @@ const agregarCarrito = (objetoCarrito) => {
 
     //  totalCarritoRender()
 }
-
-
-
-
-
 const renderizarProductos = (produtosRenderizar) => {
     // renderiza productos en el DOM
     const contenedorProductos = document.getElementById("cardcontainer")
@@ -30,7 +114,7 @@ const renderizarProductos = (produtosRenderizar) => {
     // borramos para no duplicar
     contenedorProductos.innerHTML = ""
     produtosRenderizar.forEach(({ name, id, type, price, stock, description }) => {
-        console.log(id)
+
         const prodCard = document.createElement("div")
         prodCard.style = "width:15rem"
         prodCard.innerHTML = `
@@ -40,7 +124,7 @@ const renderizarProductos = (produtosRenderizar) => {
                             </div>
                             <div class="card-descripcion">
                                 <p>${description}</p>                               
-                                <p>${price}</p>
+                                <p>$${parseInt(price)}</p>
                             </div>
                             <div class="button-add">
                                 <button id="add${id}">+</button>

@@ -1,8 +1,3 @@
-
-
-
-
-
 const renderizarCarrito = (productosGuardados) => {
     const contenedorCarrito = document.getElementById("contCarrito")
     const modalContainer = document.getElementById("navContainer")
@@ -39,6 +34,8 @@ const renderizarCarrito = (productosGuardados) => {
 
         const modalCarrito = document.getElementById("contenidoCarrito")
         const btnCerrar = document.getElementById("close")
+        const btnComprar = document.getElementById("comprar")
+        const btnEliminar = document.getElementById("vaciar")
         modal_container = document.getElementById("modal_container")
 
 
@@ -53,28 +50,24 @@ const renderizarCarrito = (productosGuardados) => {
             // borramos para no duplicar
             console.log(result)
 
-            result.forEach(({ name, id, type, price, stock, description, quantity }) => {
+            result.forEach(({ id, price, description, quantity }) => {
                 console.log(id)
                 const prodCardCarrito = document.createElement("div")
                 prodCardCarrito.style = "width:15rem"
                 prodCardCarrito.innerHTML = `
-                                                                
+                                 <div class="container-modal">                               
                                     <div class="card-descripcion">
                                         <p>Descripcion:${description}</p>                               
                                         <p>Price:${price}</p>
-                                        <p>Quantity:${quantity}
-                                    </div>     
-                                                                                                  
+                                        <p>Quantity:${quantity}</p>
+                                        <p>Total:$ ${parseInt(quantity) * parseInt(price)}</p>
+                                    </div> 
+                                    <div class="image-modal">
+                                          <img src="/img/${id}.png">
+                                     </div>
+                                 </div>                                                                                                           
                                  `
-
                 contenedorCarrito.appendChild(prodCardCarrito)
-
-
-
-
-
-
-
             })
 
         })
@@ -82,6 +75,32 @@ const renderizarCarrito = (productosGuardados) => {
         btnCerrar.addEventListener("click", (evento) => {
             modal_container.classList.remove('show')
 
+
+        })
+
+        btnComprar.addEventListener("click", (evento) => {
+            modal_container.classList.remove('show')
+            console.log(productosGuardados)
+
+            localStorage.removeItem("carrito")
+            console.log(carrito)
+            localStorage.clear();
+            console.log(carrito)
+            location.reload()
+            alert("comprar realizada exitosamente")
+            appCarrito()
+
+        })
+
+        btnEliminar.addEventListener("click", (evento) => {
+            modal_container.classList.remove('show')
+            localStorage.removeItem("carrito")
+            console.log(carrito)
+            location.reload()
+            console.log(carrito)
+
+
+            appCarrito()
 
         })
 
@@ -95,13 +114,8 @@ const renderizarCarrito = (productosGuardados) => {
 
 }
 
-
-
-
-
-
-
 const appCarrito = () => {
+
     let productosGuardados = JSON.parse(localStorage.getItem('carrito')) || []
 
     console.log(productosGuardados)

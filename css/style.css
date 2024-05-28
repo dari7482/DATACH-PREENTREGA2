@@ -139,6 +139,21 @@ nav div div div {
 
 
 
+
+}
+
+@media only screen and (max-width: 1200px) {
+    .grid-sectioncards {
+        margin-top: 3rem;
+
+        grid-template-columns: 50% 50%;
+        padding: 2rem;
+
+
+
+
+    }
+
 }
 
 .card-container {
@@ -147,6 +162,9 @@ nav div div div {
     height: 28rem;
     border-radius: 15px;
     padding-top: 8px;
+    margin-bottom: 40px;
+
+
 
 
 }
@@ -179,7 +197,8 @@ nav div div div {
     flex-direction: column;
     column-gap: 1rem;
     align-items: center;
-    padding: 1rem
+    padding: 1rem;
+    min-width: 250px
 }
 
 
@@ -273,13 +292,16 @@ nav div div div {
 }
 
 .modal {
-    background-color: #fff;
+    background-color: #EDEDED;
     width: 600px;
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     text-align: center;
+    overflow-y: auto;
+    height: 60%;
+
 }
 
 .modal h1 {
@@ -289,4 +311,76 @@ nav div div div {
 .modal p {
     opacity: 0.7;
     font-size: 14px;
+}
+
+.container-modal {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(112, 218, 128);
+    padding: 5px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+}
+
+.image-modal {
+
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+
+}
+
+.image-modal img {
+    width: 14rem;
+    height: 13rem;
+
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+}
+
+
+
+.imgae-chapter-container {
+
+    width: 90vw;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 5rem;
+    flex-wrap: wrap;
+    padding: 50px;
+    background-color: #70DA80;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+
+
+
+}
+
+.container-episode {
+
+    width: 200px;
+    height: 400px;
+    background-color: #7070AF;
+    margin-bottom: 15px;
+    border-radius: 15px;
+
+
+
+
+}
+
+.container-episode img {
+
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    border-radius: 15px;
+
+
 }
