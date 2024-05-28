@@ -67,7 +67,7 @@ const productos = [
         type: "simpson",
         price: 3450,
         stock: 18,
-        description: "RADIOACTIVE MAN AND FALLOUT BOY",
+        description: "RADIOACTIVE MAN",
         serie: "McFarlens",
         cantidad: 0
     },
@@ -77,7 +77,7 @@ const productos = [
         type: "simpson",
         price: 3020,
         stock: 20,
-        description: "TREEHOUSE OF HORRORS I",
+        description: "TREEHOUSE OF HORRORS",
         serie: "McFarlens",
         cantidad: 0
     },

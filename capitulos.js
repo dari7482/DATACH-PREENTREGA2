@@ -10,15 +10,9 @@ const handleGetData = async () => {
         const res = await fetch(base_url);
         const personajes = await res.json();
         data = personajes;
-
         const temporadasFiltrados = personajes.map((item) => item.season);
         const uniqueTemporadas = [...new Set(temporadasFiltrados)];
         console.log(uniqueTemporadas);
-
-
-
-
-
         handleDropdownData(uniqueTemporadas);
         dropdownOptions.value = "1";
         handleEpisode("1");
@@ -66,9 +60,9 @@ function renderData(data) {
                 <img src="${imageUrl}" alt="${element.name}" onerror="this.onerror=null;this.src='${base_fake}';">
             </div>
             <h2>${element.name}</h2>    
-            <p>Species: ${element.rating}</p>
-            <p>Status: ${element.season}</p>
-            <p>Gender: ${element.episode}</p>
+            <p>RAITNG: ${element.rating}</p>
+            <p>SEASON: ${element.season}</p>
+            <p>EPISODE: ${element.episode}</p>
         </div>`;
         cardsContainer.appendChild(cardBody);
     });
