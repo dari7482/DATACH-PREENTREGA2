@@ -1,5 +1,5 @@
 let base_url = "https://api.sampleapis.com/simpsons/episodes";
-let base_fake = "/img/01.png";
+let base_fake = "./img/01.png";
 const cardsContainer = document.getElementById("card-container");
 const dropdownOptions = document.getElementById("options");
 
