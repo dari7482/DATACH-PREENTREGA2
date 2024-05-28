@@ -63,7 +63,7 @@ const renderizarCarrito = (productosGuardados) => {
                                         <p>Total:$ ${parseInt(quantity) * parseInt(price)}</p>
                                     </div> 
                                     <div class="image-modal">
-                                          <img src="/img/${id}.png">
+                                          <img src="./img/${id}.png">
                                      </div>
                                  </div>                                                                                                           
                                  `
