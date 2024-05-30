@@ -151,22 +151,13 @@ const renderizarProductos = (produtosRenderizar) => {
             console.log(cantidad)
             cantidad++
             valorContador.textContent = cantidad
-
-
-
         })
         btDes.addEventListener("click", (evento) => {
-
-
             console.log(cantidad)
-
             if (cantidad > 0) {
                 cantidad--
                 valorContador.textContent = cantidad
             }
-
-
-
         })
 
         // Funcionalidad al boton de agregar para agregar prods al carrito
@@ -174,10 +165,6 @@ const renderizarProductos = (produtosRenderizar) => {
         btn.addEventListener("click", (evento) => {
             const cantidadCompra = document.querySelector(`#valorcontador${id}`)
             const guardarCarrito = parseInt(cantidadCompra.textContent)
-
-
-
-
 
             agregarCarrito({ name, id, type, price, stock, description, quantity: guardarCarrito })
             /*  renderizarCarrito()

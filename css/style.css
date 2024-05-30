@@ -17,7 +17,9 @@
     grid-template-columns: 100%;
     background-image: url("../img/nubesNavBar.png");
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
+    position: sticky;
+    top: 0;
+    padding: 5px;
 
 }
 
@@ -31,6 +33,7 @@
     font-family: "Merienda One", cursive;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     height: 110px;
+
 
 
 
@@ -70,7 +73,8 @@ ul {
 ul li a {
 
     text-decoration: none;
-    color: black
+    color: black;
+    cursor: not-allowed
 }
 
 ul li img {
@@ -198,21 +202,12 @@ nav div div div {
     display: flex;
     justify-content: center;
 
-
-
-
 }
 
 .card-image img {
     width: 14rem;
     height: 13rem;
-
     border-radius: 15px;
-
-
-
-
-
 }
 
 .card-descripcion {
@@ -239,9 +234,7 @@ nav div div div {
     display: flex;
     justify-content: center;
     align-items: center;
-
-
-
+    cursor: pointer
 }
 
 .button-add {
@@ -249,13 +242,17 @@ nav div div div {
     justify-content: center;
     column-gap: .5rem;
     margin-bottom: .5rem;
-    font-family: "Merienda One", cursive
+    font-family: "Merienda One", cursive;
+
 }
 
 .button-addcart {
     display: flex;
-    justify-content: center
+    justify-content: center;
+    cursor: pointer
 }
+
+
 
 .button-addcart button {
     margin: 5px;
@@ -265,10 +262,26 @@ nav div div div {
     border: none;
     font-weight: bold;
     background-color: rgb(112, 112, 175);
-    font-family: "Merienda One", cursive
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
 }
 
+.button-addcart button:hover {
+    background-color: #3e8e41
+}
 
+.button-addcart button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#options {
+    text-align: center;
+
+
+}
 
 .input-cantidad {
     display: flex;
@@ -321,15 +334,44 @@ nav div div div {
     max-width: 100%;
     padding: 30px 50px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
     text-align: center;
     overflow-y: auto;
     height: 60%;
     background-image: url("../img/nubesNavBar.png");
-    border-radius: 60px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: 1px solid;
 
+
+
+
+}
+
+.modal h1 {
+    font-family: "Merienda One", cursive;
+    font-size: 3rem;
+
+
+
+
+}
+
+.modal::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+
+
+}
+
+
+.modal::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 100px;
+
+
+}
+
+.modal::-webkit-scrollbar-thumb:hover {
+    background: #555;
 
 }
 
@@ -353,6 +395,7 @@ nav div div div {
     background-image: url("../img/nubesNavBar.png");
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 65px;
     margin-top: 20px;
+
 
 }
 
@@ -391,7 +434,7 @@ nav div div div {
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-image: url("../img/nubesNavBar.png");
-
+    margin-bottom: 100px;
 
 
 }
@@ -482,4 +525,73 @@ nav div div div {
     border-radius: 60px;
 
 
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    background-image: url("../img/nubesNavBar.png");
+}
+
+footer .footerHeader {
+
+    font-family: "Merienda One", cursive;
+
+
+
+}
+
+footer img {
+
+    width: 100px;
+    height: 100px;
+
+}
+
+.comprar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(112, 112, 175);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+
+.cerrar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(32, 162, 80);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
+}
+
+.eliminar {
+
+    margin-bottom: 15px;
+    width: 120px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(186, 86, 86);
+    font-family: "Merienda One", cursive;
+    cursor: pointer;
+    box-shadow: 0 9px #999
 }
